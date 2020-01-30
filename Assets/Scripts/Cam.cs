@@ -5,7 +5,7 @@ using UnityEngine;
 public class Cam : MonoBehaviour
 {
     public Transform m_playerTransform;
-
+    public GameObject player;
     //设定一个角色能看到的最远值
     public float Ahead;
 
@@ -20,7 +20,7 @@ public class Cam : MonoBehaviour
     {
 
         //获取当前角色的transform
-        m_playerTransform = GameObject.Find("Player").GetComponent<Transform>();
+        m_playerTransform = player/*.Find("Player")*/.GetComponent<Transform>();
 
     }
 

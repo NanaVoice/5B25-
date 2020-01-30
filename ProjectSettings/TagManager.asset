@@ -10,6 +10,9 @@ TagManager:
   - Enemy
   - ending
   - Over
+  - Food
+  - Floor
+  - Enemy2
   layers:
   - Default
   - TransparentFX

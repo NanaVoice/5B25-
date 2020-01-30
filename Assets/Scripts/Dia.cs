@@ -7,11 +7,13 @@ public class Dia : MonoBehaviour
 {
     public GameObject dia;
     public GameObject choice;
+    public GameObject[] tachie;
     public Text diaText;
     bool isEvent;
     bool isChoice;
     public string[] _diaText;
     public int num=0;
+    public int tachieNum=0;
 
     public void GameChoice1()
     {
@@ -61,6 +63,50 @@ public class Dia : MonoBehaviour
         }
 
         diaText.text = _diaText[num];
+
+        if (Input.GetKeyDown(KeyCode.P)&&isEvent==true)
+        {
+            if (tachieNum < 5)
+            {
+                tachieNum++;
+            }
+            else tachieNum = 0;
+        }
+
+        if (tachieNum == 0) {
+            for(int i=0;i<5;i++)
+            tachie[i].SetActive(false);
+        }
+        else if (tachieNum == 1)
+        {
+            for (int i = 0; i < 5; i++)
+                tachie[i].SetActive(false);
+            tachie[0].SetActive(true);
+        }
+        else if (tachieNum == 2)
+        {
+            for (int i = 0; i < 5; i++)
+                tachie[i].SetActive(false);
+            tachie[1].SetActive(true);
+        }
+        else if (tachieNum == 3)
+        {
+            for (int i = 0; i < 5; i++)
+                tachie[i].SetActive(false);
+            tachie[2].SetActive(true);
+        }
+        else if (tachieNum == 4)
+        {
+            for (int i = 0; i < 5; i++)
+                tachie[i].SetActive(false);
+            tachie[3].SetActive(true);
+        }
+        else if (tachieNum == 5)
+        {
+            for (int i = 0; i < 5; i++)
+                tachie[i].SetActive(false);
+            tachie[4].SetActive(true);
+        }
     }
 
     /*
